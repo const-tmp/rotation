@@ -12,3 +12,7 @@ type Env struct {
 func NewEnv(vg rotation.ValueGetter, varName string) Env {
 	return Env{re: NewRegex(vg, regexp.MustCompile(varName+`=(.*)`))}
 }
+
+func (e Env) GetValue() string {
+	return e.re.GetValue()
+}
