@@ -6,7 +6,7 @@ import (
 )
 
 type File struct {
-	*sync.Mutex
+	sync.Mutex
 	Path, value string
 }
 
